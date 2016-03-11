@@ -87,6 +87,15 @@
     justify-content: center;
 }
 
+.guuc-section--contact-us {
+    min-height: calc(50vh - 64px);
+}
+
+.is-small-screen .guuc-section--contact-us {
+    min-height: calc(50vh - 56px);
+}
+
+
 .guuc-logo {
     width: 100%;
 }
@@ -140,6 +149,16 @@
     text-align: center;
 }
 
+.guuc-list {
+    border-left: 4px solid #a3c644;
+    list-style: none;
+    padding-left: 8px;
+}
+
+.guuc-list__item + .guuc-list__item {
+    margin-top: 20px;
+}
+
 /* Organisers card */
 .guuc-organizer {
     width: 100%;
@@ -165,6 +184,7 @@
 
 .guuc-organizer__logo {
     max-height: 80px;
+    max-width: 100%;
     width: auto;
 }
 
@@ -213,9 +233,12 @@
 .guuc-person__info {}
 
 .guuc-person__name,
-.guuc-person__title {
+.guuc-person__title,
+.guuc-person__email,
+.guuc-person__role {
     margin: 0;
 }
+
 
 /* Page media queries */
 
@@ -227,6 +250,10 @@
 
     .guuc-section__additional-bg-1 {
         margin: -20px -20px 0;
+    }
+
+    .guuc-section__common-text {
+        font-size: 14px;
     }
 
 }
@@ -249,10 +276,6 @@
         font-size: 24px;
     }
 
-    .guuc-section__common-text {
-        font-size: 14px;
-    }
-
     .guuc-section__additional-bg-1 {
         background-position: 50% 100%;
         background-size: cover;
@@ -263,8 +286,36 @@
         right: auto;
     }
 
-}
+    /* Persons media */
 
-@media (min-width: 840px) {
+    .guuc-person__photo-wrapper {
+        float: none;
+    }
+
+    .guuc-person__photo {
+        margin: 0 auto;
+    }
+
+    .guuc-person__info-wrapper {
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .guuc-person__name,
+    .guuc-person__title,
+    .guuc-person__email,
+    .guuc-person__role {
+        text-align: center;
+    }
+
+    .guuc-person__name {
+        font-size: 18px;
+    }
+
+    .guuc-person__title,
+    .guuc-person__email,
+    .guuc-person__role {
+        font-size: 12px;
+    }
 
 }

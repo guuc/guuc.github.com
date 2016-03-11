@@ -2,6 +2,7 @@
     vertical-align: middle
 }
 
+a .mdi,
 .mdl-button .mdi,
 .mdl-navigation__link .mdi {
     margin-right: 24px;
