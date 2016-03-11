@@ -5,7 +5,7 @@
             "secondName": "Рябченко",
             "position": "Software Engineer",
             "email": "Aliaksei_Rabchanka@epam.com",
-            "role": "Идея, координатор проекта",
+            "role": "Автор идеи, координатор проекта",
             "photo": "images/persons/Aliaksei_Rabchanka.jpg"
         },
         {
@@ -21,7 +21,7 @@
             "secondName": "Котович",
             "position": "Software Engineer",
             "email": "Eugene_Kotovich@epam.com",
-            "role": "Техническая поддержка",
+            "role": "Ответственный за техническую поддержку проекта",
             "photo": "images/persons/Eugene_Kotovich.jpg"
         },
         {
@@ -37,7 +37,7 @@
             "secondName": "Гатилов",
             "position": "Junior Software Engineer",
             "email": "Mikhail_Hatsilau@epam.com",
-            "role": "Техническая поддержка",
+            "role": "Ответственный за техническую поддержку проекта",
             "photo": "images/persons/Mikhail_Hatsilau.jpg"
         },
         {
@@ -45,7 +45,7 @@
             "secondName": "Панасюк",
             "position": "Senior Software Engineer",
             "email": "Ruslan_Panasiuk@epam.com",
-            "role": "Координатор проекта, техническая поддержка",
+            "role": "Координатор проекта, технический консультант проекта",
             "photo": "images/persons/Ruslan_Panasiuk.gif"
         },
         {
@@ -63,6 +63,7 @@
             "secondName": "Кузьменков",
             "position": "Заведующий кафедрой, кандидат физико-математических наук, доцент",
             "email": "kuzmenkov@gsu.by",
+            "role": "Координатор проекта",
             "photo": "images/persons/Dmitry_Kuzmenkov.gif"
         }
     ],
@@ -72,6 +73,7 @@
             "secondName": "Тихоненко",
             "position": "Заведующий кафедрой, кандидат физико-математических наук, доцент",
             "email": "ttihonenko@gstu.by",
+            "role": "Координатор проекта",
             "photo": "images/persons/Tatiana_Tihonenko.jpg"
         }
     ]
