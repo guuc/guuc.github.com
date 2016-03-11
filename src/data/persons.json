@@ -13,7 +13,7 @@
             "secondName": "Кулага",
             "position": "Software Engineering Team Leader",
             "email": "Vadim_Kulaga@epam.com",
-            "role": "Куратор проекта",
+            "role": "Координатор проекта",
             "photo": "images/persons/Vadim_Kulaga.gif"
         },
         {
@@ -23,6 +23,14 @@
             "email": "Eugene_Kotovich@epam.com",
             "role": "Техническая поддержка",
             "photo": "images/persons/Eugene_Kotovich.jpg"
+        },
+        {
+            "firstName": "Ирина",
+            "secondName": "Тищенко",
+            "position": "Senior HR Specialist",
+            "email": "Iryna_Tsishchanka@epam.com",
+            "role": "Координатор проекта",
+            "photo": "images/persons/Iryna_Tsishchanka.jpg"
         },
         {
             "firstName": "Михаил",
@@ -37,7 +45,7 @@
             "secondName": "Панасюк",
             "position": "Senior Software Engineer",
             "email": "Ruslan_Panasiuk@epam.com",
-            "role": "Техническая поддержка",
+            "role": "Координатор проекта, техническая поддержка",
             "photo": "images/persons/Ruslan_Panasiuk.gif"
         },
         {
@@ -45,7 +53,7 @@
             "secondName": "Гуд",
             "position": "Resource Development Lab Team Leader",
             "email": "Siarhei_Hud@epam.com",
-            "role": "Куратор проекта",
+            "role": "Координатор проекта",
             "photo": "images/persons/Siarhei_Hud.gif"
         }
     ],
