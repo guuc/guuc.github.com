@@ -61,7 +61,7 @@
         {
             "firstName": "Дмитрий",
             "secondName": "Кузьменков",
-            "position": "Заведующий кафедрой, Кандидат физико-математических наук, Доцент",
+            "position": "Заведующий кафедрой, кандидат физико-математических наук, доцент",
             "email": "kuzmenkov@gsu.by",
             "photo": "images/persons/Dmitry_Kuzmenkov.gif"
         }
@@ -70,8 +70,8 @@
         {
             "firstName": "Татьяна",
             "secondName": "Тихоненко",
-            "position": "Заведующая кафедрой, Кандидат физико-математических наук, Доцент",
-            "email": "kaf_info@gstu.by",
+            "position": "Заведующий кафедрой, кандидат физико-математических наук, доцент",
+            "email": "ttihonenko@gstu.by",
             "photo": "images/persons/Tatiana_Tihonenko.jpg"
         }
     ]

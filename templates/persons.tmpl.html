@@ -9,7 +9,7 @@
         </div>
         <div class="guuc-person__info-wrapper">
             <div class="guuc-person__info">
-                <h5 data-ng-bind="person.firstName + ', ' + person.secondName"
+                <h5 data-ng-bind="person.firstName + ' ' + person.secondName"
                     class="guuc-person__name guuc-color-text--blue"></h5>
                 <p data-ng-bind="person.position"
                    class="guuc-person__title guuc-color-text--green">Software Engineer</p>
@@ -20,7 +20,8 @@
                        class="guuc-color-text--graphite"></a>
                 </p>
                 <p data-ng-show="person.role"
-                   data-ng-bind="person.role"><span class="guuc-color-text--medium-grey">Роль:</span></p>
+                   data-ng-bind="person.role"
+                   class="guuc-person__role"><span class="guuc-color-text--medium-grey">Роль:</span></p>
             </div>
         </div>
     </div>
