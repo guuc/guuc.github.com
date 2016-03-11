@@ -1,0 +1,70 @@
+{
+    "epam": [
+        {
+            "firstName": "Алексей",
+            "secondName": "Рябченко",
+            "position": "Software Engineer",
+            "email": "Aliaksei_Rabchanka@epam.com",
+            "role": "Идея, куратор проекта",
+            "photo": "images/persons/Aliaksei_Rabchanka.jpg"
+        },
+        {
+            "firstName": "Вадим",
+            "secondName": "Кулага",
+            "position": "Software Engineering Team Leader",
+            "email": "Vadim_Kulaga@epam.com",
+            "role": "Куратор проекта",
+            "photo": "images/persons/Vadim_Kulaga.gif"
+        },
+        {
+            "firstName": "Евгений",
+            "secondName": "Котович",
+            "position": "Software Engineer",
+            "email": "Eugene_Kotovich@epam.com",
+            "role": "Техническая поддержка",
+            "photo": "images/persons/Eugene_Kotovich.jpg"
+        },
+        {
+            "firstName": "Михаил",
+            "secondName": "Гатилов",
+            "position": "Junior Software Engineer",
+            "email": "Mikhail_Hatsilau@epam.com",
+            "role": "Техническая поддержка",
+            "photo": "images/persons/Mikhail_Hatsilau.jpg"
+        },
+        {
+            "firstName": "Руслан",
+            "secondName": "Панасюк",
+            "position": "Senior Software Engineer",
+            "email": "Ruslan_Panasiuk@epam.com",
+            "role": "Техническая поддержка",
+            "photo": "images/persons/Ruslan_Panasiuk.gif"
+        },
+        {
+            "firstName": "Сергей",
+            "secondName": "Гуд",
+            "position": "Resource Development Lab Team Leader",
+            "email": "Siarhei_Hud@epam.com",
+            "role": "Куратор проекта",
+            "photo": "images/persons/Siarhei_Hud.gif"
+        }
+    ],
+    "gsu": [
+        {
+            "firstName": "Дмитрий",
+            "secondName": "Кузьменков",
+            "position": "Заведующий кафедрой, Кандидат физико-математических наук, Доцент",
+            "email": "kuzmenkov@gsu.by",
+            "photo": "images/persons/Dmitry_Kuzmenkov.gif"
+        }
+    ],
+    "gstu": [
+        {
+            "firstName": "Татьяна",
+            "secondName": "Тихоненко",
+            "position": "Заведующая кафедрой, Кандидат физико-математических наук, Доцент",
+            "email": "kaf_info@gstu.by",
+            "photo": "images/persons/Tatiana_Tihonenko.jpg"
+        }
+    ]
+}

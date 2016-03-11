@@ -1,0 +1,27 @@
+<div class="mdl-grid">
+    <div data-ng-repeat="person in persons"
+         data-ng-class="persons.length > 1 ? 'mdl-cell mdl-cell--6-col-desktop' : 'mdl-cell mdl-cell--12-col-desktop'"
+         class="guuc-person">
+        <div class="guuc-person__photo-wrapper">
+            <div data-bg-image="person.photo"
+                 class="guuc-person__photo">
+            </div>
+        </div>
+        <div class="guuc-person__info-wrapper">
+            <div class="guuc-person__info">
+                <h5 data-ng-bind="person.firstName + ', ' + person.secondName"
+                    class="guuc-person__name guuc-color-text--blue"></h5>
+                <p data-ng-bind="person.position"
+                   class="guuc-person__title guuc-color-text--green">Software Engineer</p>
+                <p class="guuc-person__email">
+                    <i class="mdi mdi-contact-mail guuc-color-text--medium-grey"></i>
+                    <a data-ng-bind="person.email"
+                       data-ng-href="{{'mailto:' + person.email}}"
+                       class="guuc-color-text--graphite"></a>
+                </p>
+                <p data-ng-show="person.role"
+                   data-ng-bind="person.role"><span class="guuc-color-text--medium-grey">Роль:</span></p>
+            </div>
+        </div>
+    </div>
+</div>

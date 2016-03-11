@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>GUUC</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- Chrome, Firefox OS and Opera theme color -->
+        <meta name="theme-color" content="#1a9cb0">
+        <!-- Windows Phone theme color-->
+        <meta name="msapplication-navbutton-color" content="#1a9cb0">
+        <meta name="msapplication-TileColor" content="#1a9cb0">
+        <link rel="icon" type="image/x-icon" href="images/logo-icons/favicon.ico">
+        <link rel="icon" type="image/png" href="images/logo-icons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="images/logo-icons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="images/logo-icons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="images/logo-icons/favicon-192x192.png" sizes="192x192">
+        <!-- iOS Safari theme color -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-180x180.png">
+        <!-- App styles -->
+        <link rel="stylesheet" href="styles/vendor/material.min.css">
+        <link rel="stylesheet" href="styles/vendor/materialdesignicons.min.css">
+        <link rel="stylesheet" href="styles/app/app.css">
+        <link rel="stylesheet" href="styles/app/icons.css">
+    </head>
+    <body class="mdl-guuc" data-ng-app="guucApp">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <div class="mdl-layout__header layout__header--waterfall mdl-layout--no-desktop-drawer-button mdl-color--white">
+                <div class="mdl-layout__header-row">
+                    <div class="mdl-layout__drawer-button mdl-js-button mdl-js-ripple-effect">
+                        <i class="mdi mdi-menu guuc-color-text--graphite"></i>
+                    </div>
+                    <nav class="mdl-navigation guuc-navigation guuc-navigation--vertical mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                           href="#" data-href="home"
+                           data-scroll><i class="mdi mdi-home"></i>Главная</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                           href="#" data-href="about_guuc"
+                           data-scroll><i class="mdi mdi-information"></i>О GUUC</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                           href="#" data-href="programm"
+                           data-scroll><i class="mdi mdi-clipboard-text"></i>Программа</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                           href="#" data-href="sponsors"
+                           data-scroll><i class="mdi  mdi-account-multiple"></i>Организаторы</a>
+                        <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                           href="#" data-href="contact_us"
+                           data-scroll><i class="mdi mdi-email"></i>Связаться с нами</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="mdl-layout__drawer guuc-drawer">
+                <nav class="guuc-navigation guuc-navigation--horizontal mdl-navigation">
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                       href="#" data-href="home"
+                       data-scroll><i class="mdi mdi-home"></i>Главная</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                       href="#" data-href="about_guuc"
+                       data-scroll><i class="mdi mdi-information"></i>О GUUC</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                       href="#" data-href="programm"
+                       data-scroll><i class="mdi mdi-clipboard-text"></i>Программа</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                       href="#" data-href="sponsors"
+                       data-scroll><i class="mdi  mdi-account-multiple"></i>Организаторы</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+                       href="#" data-href="contact_us"
+                       data-scroll><i class="mdi mdi-email"></i>Связаться с нами</a>
+                </nav>
+            </div>
+            <div class="mdl-layout__content">
+                <div class="guuc-section guuc-section--intro guuc-section--bg1" data-scroll-target="home">
+                    <div class="guuc-logo text--center">
+                        <img src="images/guuc-logo-2.png" class="guuc-logo-image">
+                    </div>
+                    <div class="guuc-section--intro__button-wrapper text--center">
+                        <button type="button"
+                                class="mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect"
+                                data-href="about_guuc">
+                            <i class="mdi mdi-arrow-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="guuc-section guuc-section--bg2" data-scroll-target="about_guuc">
+                    <div class="guuc-section__additional-bg-1"></div>
+                    <div class="guuc-section__inner mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col-desktop mdl-cell--6-offset-desktop mdl-cell--12-col-phone mdl-cell--12-col-tablet">
+                            <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--blue">О GUUC</h2>
+
+                            <p class="mdl-typography--subhead guuc-color-text--graphite guuc-section__common-text">
+                                Если ты студент I или II курса, знаешь HTML и CSS, чувствуешь в себе силу настоящего
+                                frontend разработчика, то у тебя есть отличный шанс проверить себя и свои способности.
+                                В первые в Гомеле проводятся открытые соревнования по UI/UXD.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="guuc-section guuc-color--graphite guuc-color-text--light-grey" data-scroll-target="programm">
+                    <div class="guuc-section__inner">
+                        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--green">Программа</h2>
+
+                        <p class="mdl-typography--subhead guuc-section__common-text">
+                            Соревнования будут проходить в два этапа. Отборочный тур состоит из практического задания,
+                            которое нужно выполнить и выслать на электронную почту guuc2016@gmail.com до ХХХ. Первые 30
+                            участников, которые успешно справятся с заданием и первыми пришлют свои решения – попадут в
+                            полуфинал, который пройдет в Гомельском офис EPAM. И только 15 лучших из лучших смогут
+                            посоревноваться между собой за звание лучшего.
+
+                        </p>
+                        <p>
+                            Условия отборочного тура - (ссылка на файл)
+                        </p>
+                        <p>
+                            Задание необходимо упаковать в архив ZIP и выслать на электронную почту guuc2016@gmail.com до ХХХ.
+                        </p>
+                        <p>
+                            Полуфинал пройдет в Гомельском офисе EPAM. Участникам предстоит посоревноваться в умении находить
+                            и исправлять ошибки в разметке страниц и каскадных таблицах стилей.
+                        </p>
+                        <p>
+                            Финал будет представлять собой CSS Quiz. Участникам нужно с помощью CSS селекторов находить
+                            заданные элементы в тексте. При этом важны будут не только правильность, оптимальность,
+                            но и время выполнения запросов.
+                        </p>
+                        <p>
+                            Все участники, попавшие в полуфинал, получат приятные сувениры, а также смогут посетить
+                            мастер-классы от ведущих UX-разработчиков EPAM.
+                        </p>
+                    </div>
+                </div>
+                <div class="guuc-section mdl-color--grey-100" data-scroll-target="sponsors">
+                    <div class="guuc-section__inner">
+                        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--red">Организаторы</h2>
+
+                        <div data-organizers></div>
+
+                    </div>
+                </div>
+                <div class="mdl-mega-footer guuc-color--graphite">
+                    <div class="mdl-mega-footer--middle-section">
+                        <p class="text--center">© 2016 EPAM Systems. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/vendor/angular.min.js"></script>
+        <script src="js/vendor/jquery-2.2.1.min.js"></script>
+        <script src="js/vendor/material.min.js"></script>
+        <script src="js/vendor/SmoothScroll.js"></script>
+        <script src="js/vendor/jquery.touchSwipe.min.js"></script>
+        <script src="js/vendor/jquery.smooth-scroll.js"></script>
+
+        <script src="js/app/main.js"></script>
+        <script src="js/app/app.js"></script>
+        <script src="js/app/controllers/mainController.js"></script>
+        <script src="js/app/services/dataLoader.js"></script>
+        <script src="js/app/directives/organizer.js"></script>
+        <script src="js/app/directives/person.js"></script>
+        <script src="js/app/directives/bgImage.js"></script>
+        <script src="js/app/directives/mdlButton.js"></script>
+    </body>
+</html>
