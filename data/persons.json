@@ -25,6 +25,14 @@
             "photo": "images/persons/Eugene_Kotovich.jpg"
         },
         {
+            "firstName": "Иван",
+            "secondName": "Селицкий",
+            "position": "Software Engineering Team Leader",
+            "email": "Ivan_Sialitski@epam.com",
+            "role": "Эксперт в области фронтенд разработки",
+            "photo": "images/persons/Ivan_Sialitski.gif"
+        },
+        {
             "firstName": "Ирина",
             "secondName": "Эмори",
             "position": "HR Specialist",
