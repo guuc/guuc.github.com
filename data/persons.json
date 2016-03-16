@@ -26,6 +26,14 @@
         },
         {
             "firstName": "Ирина",
+            "secondName": "Эмори",
+            "position": "HR Specialist",
+            "email": "Irene_Emory@epam.com",
+            "role": "Координатор проекта",
+            "photo": "images/persons/Irene_Emory.jpg"
+        },
+        {
+            "firstName": "Ирина",
             "secondName": "Тищенко",
             "position": "Senior HR Specialist",
             "email": "Iryna_Tsishchanka@epam.com",
