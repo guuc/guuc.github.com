@@ -52,6 +52,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     min-height: calc(100vh - 64px);
     padding: 60px 16px;
     position: relative;
@@ -210,6 +212,8 @@
     border: 6px solid #E7E7E7;
     border-radius: 50%;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     height: 120px;
     width: 120px;
     overflow: hidden;
