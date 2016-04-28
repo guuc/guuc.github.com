@@ -1,2 +1,8 @@
 # IDEs folders
 .idea
+
+# NPM
+node_modules
+
+# Dist
+dist

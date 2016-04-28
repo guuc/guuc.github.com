@@ -1,0 +1,28 @@
+{% for organizer in organizersData.organizers %}
+
+<div class="mdl-grid mdl-grid--no-spacing mdl-card mdl-shadow--2dp guuc-organizer">
+    <div class="mdl-cell--12-col mdl-grid mdl-grid--no-spacing mdl-card__title mdl-card--border">
+        <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--3-col-tablet guuc-organizer__logo-container {{organizer.colorClass}}">
+            <img src="{{organizer.logoSrc}}"
+                 class="guuc-organizer__logo">
+        </div>
+        <div class="mdl-cell mdl-cell--9-col-desktop mdl-cell--5-col-tablet guuc-organizer__title-container">
+            <div class="guuc-organizer__title">
+                <h4 class="mdl-card__title-text">{{organizer.title}}</h4>
+                <p class="guuc-organizer__subtitle guuc-color-text--medium-grey">{{organizer.subtitle}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="mdl-cell--12-col mdl-card__supporting-text guuc-color-text--graphite">
+
+        {% include "persons.tmpl.html" with {personsData: organizersData.persons[organizer.id]} %}
+
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <a data-mdl-button
+           href="{{'mailto:' + organizer.email}}"
+           class="mdl-button mdl-js-button mdl-js-ripple-effect guuc-color-text--green"><i class="mdi mdi-contact-mail"></i> {{organizer.email}}</a>
+    </div>
+</div>
+
+{% endfor %}

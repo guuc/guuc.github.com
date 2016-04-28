@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Александр Симонок",
+        "photo": "images/participants/Aleksandr_Simonok.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Ян Юнитский",
+        "photo": "images/participants/Yan_Yunitskiy.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Александр Колымаго",
+        "photo": "images/participants/Aleksandr_Kolymago.jpg"
+    }
+]

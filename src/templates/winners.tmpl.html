@@ -1,0 +1,55 @@
+{% for event in eventsData %}
+
+<div class="mdl-grid mdl-grid--no-spacing mdl-card mdl-shadow--2dp guuc-winners" style="width: 100%">
+    <div class="mdl-cell--12-col mdl-card__title mdl-card--border">
+        <h4 class="mdl-card__title-text"><span>GUUC #{{loop.index}}</span> - {{event.date}}</h4>
+    </div>
+
+    {% if event.photos.length > 0 %}
+
+    <div class="mdl-cell--12-col guuc-winners__media" id="media">
+        <div class="owl-carousel">
+
+            {% for photo in event.photos %}
+
+            <img class="owl-lazy" data-src="{{photo}}">
+
+            {% endfor %}
+
+        </div>
+    </div>
+
+    {% endif %}
+
+    <div class="mdl-cell--12-col mdl-card__supporting-text guuc-color-text--graphite">
+        <p>{{event.text}}</p>
+        <div class="mdl-grid guuc-winners__winners-list">
+
+            {% for participant in event.participants %}
+
+                <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet {% if loop.first %}mdl-cell--2-offset-tablet {% endif %}mdl-cell--4-col-desktop mdl-card mdl-shadow--2dp guuc-winner">
+                    <div class="guuc-winner__inner-wrapper">
+                        <div class="guuc-winner__photo-wrapper">
+                            <div class="guuc-winner__rank mdl-color--orange">{{loop.index}}</div>
+
+                            {% if loop.first %}
+
+                            <div class="guuc-winner__extra-rank mdl-color--orange mdi mdi-trophy-award"></div>
+
+                            {% endif %}
+
+                            <div class="guuc-winner__photo" style="background-image: url({{participant.photo}})"></div>
+                        </div>
+                        <div class="guuc-winner_info">
+                            <h5 class="guuc-winner_name guuc-color-text--blue">{{participant.name}}</h5>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endfor %}
