@@ -1,1 +1,0 @@
-var guucApp = angular.module('guucApp', []);
