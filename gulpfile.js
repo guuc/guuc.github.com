@@ -76,7 +76,7 @@ function EventData(participants, event) {
         var photos = fs.readdirSync(path.join(config.root.src, photosPath));
 
         photos = photos.map(function(photo) {
-            return path.join(photosPath, photo);
+            return path.join(photosPath, photo).split(path.sep).join('/');
         });
 
         return photos;
