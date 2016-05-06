@@ -1,3 +1,25 @@
+/* Owl carousel */
+.owl-prev,
+.owl-next {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.owl-prev {
+    left: 20px;
+}
+
+.owl-next {
+    right: 20px;
+}
+
+.owl-stage-outer {
+    width: 100%;
+    z-index: -1;
+}
+
 /* MDL styles rewriting */
 .mdl-guuc .mdl-layout__drawer-button {
     margin: 0;
@@ -219,7 +241,7 @@
 /* Misc */
 
 .no-margin {
-    margin: 0;
+    margin: 0 !important;
 }
 
 /* Organisers card */
@@ -296,11 +318,12 @@
 }
 
 /* Winners */
-
+.guuc-winners {
+    width: 100%;
+}
 
 .guuc-winners__media {
-    width: 100%;
-    overflow: hidden;
+    position: relative;
 }
 
 .guuc-winners__winners-list {
