@@ -10,7 +10,19 @@
 
         var $window = $(window),
             $scrollableContent = $('.mdl-layout__content'),
-            mdlLayout =document.querySelector('.mdl-layout');
+            mdlLayout =document.querySelector('.mdl-layout'),
+            lastScrollPosition = 0,
+            owlNexPrevBtnClass = 'mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-color--white';
+
+        $scrollableContent.on('scroll', function() {
+            var currentScrollPosition = $(this).scrollTop();
+            if(currentScrollPosition > lastScrollPosition) {
+                window.scroll(0, 1000);
+            } else {
+                window.scroll(0, 0);
+            }
+            lastScrollPosition = currentScrollPosition;
+        });
 
         $('[data-href]').on('click', function (event) {
 
@@ -27,7 +39,12 @@
         $(".owl-carousel").owlCarousel({
             items: 1,
             lazyLoad: true,
-            loop: true
+            loop: true,
+            nav: true,
+            dots: false,
+            navText: [ '<button class="' + owlNexPrevBtnClass + '"><i class="mdi mdi-chevron-left no-margin"></i></button>',
+                '<button class="' + owlNexPrevBtnClass + '"><i class="mdi mdi-chevron-right no-margin"></i></button>' ],
+            navClass: [ 'owl-prev', 'owl-next']
         });
 
         // Do when MDL is ready

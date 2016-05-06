@@ -1,13 +1,13 @@
 {% for event in eventsData %}
 
-<div class="mdl-grid mdl-grid--no-spacing mdl-card mdl-shadow--2dp guuc-winners" style="width: 100%">
+<div class="mdl-grid mdl-grid--no-spacing mdl-card mdl-shadow--2dp guuc-winners">
     <div class="mdl-cell--12-col mdl-card__title mdl-card--border">
         <h4 class="mdl-card__title-text"><span>GUUC #{{loop.index}}</span> - {{event.date}}</h4>
     </div>
 
     {% if event.photos.length > 0 %}
 
-    <div class="mdl-cell--12-col guuc-winners__media" id="media">
+    <div class="mdl-cell--12-col guuc-winners__media">
         <div class="owl-carousel">
 
             {% for photo in event.photos %}
