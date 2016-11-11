@@ -1,0 +1,36 @@
+.scrollindicator {
+  color: #464547;
+  position: absolute;
+  top: 0;
+  line-height: 64px;
+  height: 64px;
+  width: 40px;
+  display: block;
+  margin-right: 0;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: opacity 0.2s ease-in;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+
+  &--right {
+    right: 0;
+  }
+
+  &--left {
+    left: 0;
+  }
+}

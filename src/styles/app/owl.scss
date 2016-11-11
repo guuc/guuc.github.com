@@ -1,0 +1,24 @@
+.owl {
+
+  &-prev,
+  &-next {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+  }
+
+  &-prev {
+    left: 20px;
+  }
+
+  &-next {
+    right: 20px;
+  }
+
+  &-stage-outer {
+    width: 100%;
+    z-index: -1;
+  }
+
+}

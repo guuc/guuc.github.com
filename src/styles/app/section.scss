@@ -1,0 +1,115 @@
+.guuc-section {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  min-height: calc(100vh - 64px);
+  padding: 60px 16px;
+  position: relative;
+
+  .is-small-screen {
+
+    & {
+      min-height: calc(100vh - 56px);
+    }
+
+    &--contact-us {
+      min-height: calc(50vh - 56px);
+    }
+
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+  }
+
+  &__heading {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &,
+  &--intro {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+  }
+
+  &--contact-us {
+    min-height: calc(50vh - 64px);
+  }
+
+  &--intro__button-wrapper {
+    margin-top: 20px;
+  }
+
+  &--bg1 {
+    background-image: url("../../images/noise-pattern-overlay.png"), url("../../images/diagonal-lines-overlay.svg"), url("../../images/section-background-1.jpg");
+    background-repeat: repeat, no-repeat, no-repeat;
+    background-size: auto, cover, cover;
+  }
+
+  &--bg2 {
+    background-image: url("../../images/section-background-2.jpg");
+  }
+
+  &--bg3 {
+    background-image: url("../../images/section-background-3.png");
+    background-repeat: repeat;
+    background-size: auto;
+  }
+
+  &--winners {
+    background-image: url("../../images/section-backround-winners.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 479px) {
+
+    &__additional-bg-1 {
+      margin: -20px -20px 0;
+    }
+
+    &__common-text {
+      font-size: 14px;
+    }
+
+  }
+
+
+  @media (max-width: 839px) {
+
+    & {
+      padding: 40px 16px;
+    }
+
+    &__heading {
+      font-size: 24px;
+    }
+
+    &__additional-bg-1 {
+      background-position: 50% 100%;
+      background-size: cover;
+      height: 150px;
+      margin: -40px -16px 0;
+      position: relative;
+      width: auto;
+      right: auto;
+    }
+
+  }
+}

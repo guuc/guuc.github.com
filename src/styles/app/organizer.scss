@@ -1,0 +1,36 @@
+.guuc-organizer {
+  width: 100%;
+  
+  & + & {
+    margin-top: 40px;
+  }
+
+  &__logo-container,
+  &__title-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  &__logo {
+    max-height: 80px;
+    max-width: 100%;
+    width: auto;
+  }
+
+  &__title {
+    width: 100%
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+  
+}

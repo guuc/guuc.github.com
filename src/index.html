@@ -1,242 +1,157 @@
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>GUUC</title>
-        <link rel="shortcut icon" href="favicon.ico">
-        <!-- Twitter card -->
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@guuc2016">
-        <!-- Open Graph -->
-        <meta property="og:url" content="http://guuc.by/">
-        <meta property="og:type" content="website">
-        <meta property="og:title" content="GUUC - Gomel UI/UXD Competition">
-        <meta property="og:image" content="http://guuc.by/images/splash-image.jpg">
-        <meta property="og:description" content="GUUC — это первые в Гомеле открытые соревнования по UI/UXD разработке.">
-        <!-- Chrome, Firefox OS and Opera theme color -->
-        <meta name="theme-color" content="#1a9cb0">
-        <!-- Windows Phone theme color-->
-        <meta name="msapplication-navbutton-color" content="#1a9cb0">
-        <meta name="msapplication-TileColor" content="#1a9cb0">
-        <link rel="icon" type="image/x-icon" href="images/logo-icons/favicon.ico">
-        <link rel="icon" type="image/png" href="images/logo-icons/favicon-16x16.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="images/logo-icons/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="images/logo-icons/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="images/logo-icons/favicon-192x192.png" sizes="192x192">
-        <!-- iOS Safari theme color -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-180x180.png">
-        <!-- App styles -->
-        <!-- build:css styles/vendor/vendor.css -->
-        <link rel="stylesheet" href="styles/vendor/material.min.css">
-        <link rel="stylesheet" href="styles/vendor/materialdesignicons.min.css">
-        <link rel="stylesheet" href="styles/vendor/owl.carousel.css">
-        <!-- endbuild -->
-        <!-- build:css styles/app/app.css -->
-        <link rel="stylesheet" href="styles/app/app.css">
-        <link rel="stylesheet" href="styles/app/icons.css">
-        <!-- endbuild -->
-        <!-- Yandex.Metrika counter -->
-        <script async type="text/javascript">
-            (function (d, w, c) {
-                (w[c] = w[c] || []).push(function() {
-                    try {
-                        w.yaCounter36000145 = new Ya.Metrika({id:36000145,
-                            webvisor:true,
-                            clickmap:true});
-                    } catch(e) { }
-                });
+{% extends "./templates/layout.tmpl.html" %}
 
-                var n = d.getElementsByTagName("script")[0],
-                        s = d.createElement("script"),
-                        f = function () { n.parentNode.insertBefore(s, n); };
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+{% block title %}GUUC{% endblock %}
 
-                if (w.opera == "[object Opera]") {
-                    d.addEventListener("DOMContentLoaded", f, false);
-                } else { f(); }
-            })(document, window, "yandex_metrika_callbacks");
-        </script>
-        <noscript><div><img src="//mc.yandex.ru/watch/36000145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-        <!-- /Yandex.Metrika counter -->
-        <!-- Google.Analytics counter -->
-        <script async type="text/javascript">
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+{% block content %}
 
-            ga('create', 'UA-74998771-1', 'auto');
-            ga('send', 'pageview');
+<div class="guuc-section guuc-section--intro guuc-section--bg1" data-scroll-target="home">
+    <div class="guuc-logo text--center">
+        <img src="images/guuc-logo-1.png" class="guuc-logo__image">
+    </div>
+    <div class="guuc-section--intro__button-wrapper text--center">
+        <button type="button"
+                class="mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect"
+                data-href="about_guuc">
+            <i class="mdi mdi-arrow-down"></i>
+        </button>
+    </div>
+</div>
+<div class="guuc-section guuc-section--bg2" data-scroll-target="about_guuc">
+    <div class="guuc-section__inner">
+        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--blue">Про GUUC</h2>
 
-        </script>
-        <!-- /Google.Analytics counter -->
-    </head>
-    <body class="mdl-guuc">
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <div class="mdl-layout__header layout__header--waterfall mdl-layout--no-desktop-drawer-button mdl-color--white">
-                <div class="mdl-layout__header-row">
-                    <div class="mdl-layout__drawer-button mdl-js-button mdl-js-ripple-effect">
-                        <i class="mdi mdi-menu guuc-color-text--graphite"></i>
-                    </div>
-                    <div class="guuc-navigation-wrapper mdl-layout--large-screen-only">
-                        <nav class="mdl-navigation guuc-navigation guuc-navigation--horizontal">
-                            <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                               href="#" data-href="home"
-                               data-scroll><i class="mdi mdi-home"></i>Главная</a>
-                            <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                               href="#" data-href="winners"
-                               data-scroll><i class="mdi mdi-trophy-variant mdl-color-text--orange"></i>Победители</a>
-                            <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                               href="#" data-href="about_guuc"
-                               data-scroll><i class="mdi mdi-information"></i>Про GUUC</a>
-                            <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                               href="#" data-href="programm"
-                               data-scroll><i class="mdi mdi-clipboard-text"></i>Программа</a>
-                            <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                               href="#" data-href="sponsors"
-                               data-scroll><i class="mdi  mdi-account-multiple"></i>Организаторы</a>
-                            <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                               href="#" data-href="contact_us"
-                               data-scroll><i class="mdi mdi-email"></i>Связаться с нами</a>
-                        </nav>
-                    </div>
-                    <i class="mdi mdi-chevron-left scrollindicator scrollindicator--left"></i>
-                    <i class="mdi mdi-chevron-right scrollindicator scrollindicator--right"></i>
+        <p class="mdl-typography--subhead guuc-color-text--graphite guuc-section__common-text">
+
+            <strong class="guuc-color-text--blue">GUUC</strong>, или же <strong>Gomel UI/UXD Competition</strong> – это первые в Гомеле открытые соревнования по UI/UXD разработке, направленные на поиск ребят, интересующихся веб технологиями.<br>
+            Если ты студент вуза или уже закончил обучение, знаешь HTML и CSS, чувствуешь в себе силу настоящего фронтэнд-разработчика, то у тебя есть отличный шанс проверить себя и свои способности и принять участие в GUUC 2.<br><br>
+            Для победителей и призеров соревнований в этом году предоставится уникальная возможность вне конкурса стать слушателем бесплатного тренинга по <a href="http://www.training.by/">Front-end</a> технологиям с последующим трудоустройством в компанию <a href="http://www.epam.by/">EPAM Systems</a> при условии соответствующего уровня английского языка и успешного окончания тренинга.
+
+        </p>
+    </div>
+</div>
+
+<div class="guuc-section guuc-color--graphite guuc-section--bg3 guuc-color-text--light-grey" data-scroll-target="programm">
+    <div class="guuc-section__inner">
+        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--green">Программа</h2>
+
+        <p class="mdl-typography--subhead guuc-section__common-text">
+            Соревнования GUUC 2 будут проходить по двум направлениям: <i class="guuc-color-text--blue">HTML/CSS</i> и <i class="guuc-color-text--green">JavaScript</i>. Все желающие могут принимать участие как по одному, так и по двум направлениям одновременно. Победители по каждому направлению будут выявляться независимо, с учетом набранных баллов по соответствующему направлению.
+        </p>
+
+        <ul class="guuc-list mdl-typography--subhead guuc-section__common-text">
+            <li class="guuc-list__item">
+                <strong>Отборочный тур</strong> – состоит из практического задания, необходимо упаковать в архив <strong>ZIP</strong> (имя архива должно следовать соответствующему шаблону: <i class="guuc-color-text--blue">name_surname_html-css</i> или <i class="guuc-color-text--green">name_surname_javascript</i>) и выслать на электронную почту
+                <a href="mailto:guuc2016@gmail.com">guuc2016@gmail.com</a> до
+                <strong class="guuc-color-text--blue">8 января 2017 года</strong>. В письме также необходимо указать ваши контактные данные: фамилию и имя, Skype и телефон для связи.
+            </li>
+            <li class="guuc-list__item">
+                <strong>Полуфинал</strong> и <strong>Финал</strong> – пройдут в Гомельском офисе <a href="http://www.epam.by/">EPAM Systems</a>
+            </li>
+        </ul>
+
+        <div class="mdl-grid guuc-tasks-grid">
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title guuc-color--blue">
+                    <div class="mdl-card__title-text mdl-color-text--white">CSS/HTML</div>
                 </div>
+                <div class="mdl-card__supporting-text mdl-card--expand">
+                    <div class="guuc-task__common-text mdl-typography--subhead  guuc-color-text--medium-grey">
+                        Первые <strong class="guuc-color-text--blue">20</strong> участников, которые успешно справятся с заданием и первыми пришлют свои решения – попадут в полуфинал.<br><br>
+                        <strong>Полуфинал</strong> – пройдут в Гомельском офисе <a href="http://www.epam.by/">EPAM Systems</a> <strong class="guuc-color-text--blue">14 января 2017 года</strong>.<br><br>
+                        В <strong>полуфинале</strong> участникам предстоит посоревноваться в умении находить и исправлять ошибки в разметке страниц и каскадных таблицах стилей.<br><br>
+                        <strong>Финал</strong> будет представлять собой CSS Quiz. Участникам нужно с помощью CSS селекторов находить заданные элементы в тексте. При этом важны будут не только правильность, оптимальность, но и время выполнения запросов.
+                    </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a href="http://www.guuc.by/data/html-css__task.zip"
+                       class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect"><i class="mdi mdi-download"></i>Скачать задание</a>
+                </div>
+
             </div>
-            <div class="mdl-layout__drawer guuc-drawer">
-                <nav class="guuc-navigation guuc-navigation--vertical mdl-navigation">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                       href="#" data-href="home"
-                       data-scroll><i class="mdi mdi-home"></i>Главная</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                       href="#" data-href="winners"
-                       data-scroll><i class="mdi mdi-trophy-variant mdl-color-text--orange"></i>Победители</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                       href="#" data-href="about_guuc"
-                       data-scroll><i class="mdi mdi-information"></i>Про GUUC</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                       href="#" data-href="programm"
-                       data-scroll><i class="mdi mdi-clipboard-text"></i>Программа</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                       href="#" data-href="sponsors"
-                       data-scroll><i class="mdi  mdi-account-multiple"></i>Организаторы</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
-                       href="#" data-href="contact_us"
-                       data-scroll><i class="mdi mdi-email"></i>Связаться с нами</a>
-                </nav>
+
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title guuc-color--green">
+                    <div class="mdl-card__title-text mdl-color-text--white">JavaScript</div>
+                </div>
+                <div class="mdl-card__supporting-text mdl-card--expand">
+                    <div class="guuc-task__common-text mdl-typography--subhead guuc-color-text--medium-grey">
+                        Первые <strong class="guuc-color-text--green">30</strong> участников, которые успешно справятся с заданием и первыми пришлют свои решения – попадут в полуфинал.<br><br>
+                        <strong>Полуфинал</strong> и <strong>Финал</strong> – пройдут в Гомельском офисе <a href="http://www.epam.by/">EPAM Systems</a> <strong class="guuc-color-text--green">21 января 2017 года</strong>.<br><br>
+                        В <strong>полуфинале</strong> участникам предстоит пройти JavaScript Quiz и показать свои знания в JS Core.<br><br>
+
+                        <strong>Финал</strong> будет представлять собой JavaScript Quest. Участникам предстоит правильно решить задачи на JavaScript. При этом немалую роль будет играть затраченное время.
+                    </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border">
+                    <a href="http://www.guuc.by/data/javascript__task.zip"
+                       class="mdl-button mdl-button--accent mdl-button--raised mdl-js-button mdl-js-ripple-effect"><i class="mdi mdi-download"></i>Скачать задание</a>
+                </div>
+
             </div>
-            <div class="mdl-layout__content">
-                <div class="guuc-section guuc-section--intro guuc-section--bg1" data-scroll-target="home">
-                    <div class="guuc-logo text--center">
-                        <img src="images/guuc-logo-1.png" class="guuc-logo-image">
-                    </div>
-                    <div class="guuc-section--intro__button-wrapper text--center">
-                        <button type="button"
-                                class="mdl-button mdl-button--colored mdl-js-button mdl-button--fab mdl-js-ripple-effect"
-                                data-href="about_guuc">
-                            <i class="mdi mdi-arrow-down"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="guuc-section guuc-section--bg2" data-scroll-target="about_guuc">
-                    <div class="guuc-section__inner">
-                        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--blue">Про GUUC</h2>
 
-                        <p class="mdl-typography--subhead guuc-color-text--graphite guuc-section__common-text">
-
-                            <strong class="guuc-color-text--blue">GUUC</strong>, или же <strong>Gomel UI/UXD Competition</strong>
-                            – это первые в Гомеле открытые соревнования по UI/UXD разработке.
-                            <br><br>
-                            Если ты студент I или II курса (старшие курсы, и все остальные так же могут принимать участие), знаешь HTML и CSS, чувствуешь в себе силу настоящего frontend разработчика, то у тебя есть отличный шанс проверить себя и свои способности.
-
-                        </p>
-                    </div>
-                </div>
-                <div class="guuc-section guuc-color--graphite guuc-section--bg3 guuc-color-text--light-grey" data-scroll-target="programm">
-                    <div class="guuc-section__inner">
-                        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--green">Программа</h2>
-
-                        <p class="mdl-typography--subhead guuc-section__common-text">Соревнования будут проходить в два этапа:</p>
-                        <ul class="guuc-list mdl-typography--subhead guuc-section__common-text">
-                            <li class="guuc-list__item">
-                                Отборочный тур – состоит из практического задания, которое нужно выполнить и выслать на электронную почту
-                                <a href="mailto:guuc2016@gmail.com">guuc2016@gmail.com</a> до
-                                <strong class="guuc-color-text--blue">11 апреля 2016 года</strong>. Первые
-                                <strong class="guuc-color-text--blue">30</strong> участников, которые успешно справятся с заданием и первыми пришлют свои решения – попадут в полуфинал.
-                            </li>
-                            <li class="guuc-list__item">
-                                Полуфинал и Финал – пройдут в Гомельском офисе <strong>EPAM</strong> <strong class="guuc-color-text--blue">16 апреля 2016 года</strong>. И только
-                                <strong class="guuc-color-text--blue">15</strong> лучших из лучших смогут посоревноваться между собой за звание сильнейшего.
-                            </li>
-                        </ul>
-
-                        <p class="mdl-typography--subhead guuc-section__common-text">
-                            Условия отборочного тура - (<a href="data/Task.zip" >ссылка на файл с заданием</a>)
-                            <br><br>
-                            Задание необходимо упаковать в архив <strong>ZIP</strong> и выслать на электронную почту
-                            <a href="mailto:guuc2016@gmail.com">guuc2016@gmail.com</a> до
-                            <strong class="guuc-color-text--blue">11 апреля 2016 года</strong>. В письме также необходимо указать Ваше имя и телефон для связи.
-                            <br><br>
-                            Полуфинал пройдет в Гомельском офисе EPAM. Участникам предстоит посоревноваться в умении находить и исправлять ошибки в разметке страниц и каскадных таблицах стилей.
-                            <br><br>
-                            Финал будет представлять собой CSS Quiz. Участникам нужно с помощью CSS селекторов находить заданные элементы в тексте. При этом важны будут не только правильность, оптимальность, но и время выполнения запросов.
-                            <br><br>
-                            Все участники, попавшие в полуфинал, получат приятные сувениры, а также смогут посетить мастер-классы от ведущих UX-разработчиков EPAM.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="guuc-section mdl-color--grey-100" data-scroll-target="sponsors">
-                    <div class="guuc-section__inner">
-                        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--red">Организаторы</h2>
-
-                        {% include "./templates/organizers.tmpl.html" with organizersData %}
-
-                    </div>
-                </div>
-                <div class="guuc-section guuc-section--winners" data-scroll-target="winners">
-                    <div class="guuc-section__inner">
-                        <h2 class="mdl-typography--text-uppercase guuc-section__heading mdl-color-text--white">Победители</h2>
-
-                        {% include "./templates/winners.tmpl.html" with eventsData %}
-
-                    </div>
-                </div>
-                <div class="guuc-section guuc-color--dark-blue guuc-section--bg3 guuc-section--contact-us" data-scroll-target="contact_us">
-                    <div class="guuc-section__inner">
-                        <h2 class="mdl-typography--text-uppercase guuc-section__heading mdl-color-text--white">Связаться с нами</h2>
-
-                        <p class="mdl-typography--subhead mdl-color-text--white guuc-section__common-text text--center">
-                            Любые предложения или пожелания, а также вопросы вы можете присылать нам на электронный ящик
-                            <a class="guuc-color-text--green" href="mailto:guuc2016@gmail.com">guuc2016@gmail.com</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="mdl-mega-footer guuc-color--graphite">
-                    <div class="mdl-mega-footer--middle-section">
-                        <p class="text--center no-margin">© 2016 GUUC. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
         </div>
-        <!-- build:js js/vendor.js -->
-        <script src="js/vendor/jquery-2.2.1.min.js"></script>
-        <script src="js/vendor/material.min.js"></script>
-        <script src="js/vendor/SmoothScroll.js"></script>
-        <script src="js/vendor/jquery.touchSwipe.min.js"></script>
-        <script src="js/vendor/jquery.smooth-scroll.js"></script>
-        <script src="js/vendor/owl.carousel.min.js"></script>
-        <!-- endbuild -->
-        <!-- build:js js/app.js -->
-        <script src="js/app/main.js"></script>
-        <!-- endbuild -->
-    </body>
-</html>
+
+        <p class="mdl-typography--subhead guuc-section__common-text">
+            Все участники, попавшие в полуфинал, получат приятные сувениры, а также смогут посетить мастер-классы от ведущих UX-разработчиков EPAM.
+        </p>
+
+    </div>
+</div>
+
+<!-- <div class="guuc-section guuc-color--graphite guuc-section--bg3 guuc-color-text--light-grey" data-scroll-target="programm">
+    <div class="guuc-section__inner">
+        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--green">Программа</h2>
+
+        <p class="mdl-typography--subhead guuc-section__common-text">Соревнования будут проходить в два этапа:</p>
+        <ul class="guuc-list mdl-typography--subhead guuc-section__common-text">
+            <li class="guuc-list__item">
+                Отборочный тур – состоит из практического задания, которое нужно выполнить и выслать на электронную почту
+                <a href="mailto:guuc2016@gmail.com">guuc2016@gmail.com</a> до
+                <strong class="guuc-color-text--blue">11 апреля 2016 года</strong>. Первые
+                <strong class="guuc-color-text--blue">30</strong> участников, которые успешно справятся с заданием и первыми пришлют свои решения – попадут в полуфинал.
+            </li>
+            <li class="guuc-list__item">
+                Полуфинал и Финал – пройдут в Гомельском офисе <strong>EPAM</strong> <strong class="guuc-color-text--blue">16 апреля 2016 года</strong>. И только
+                <strong class="guuc-color-text--blue">15</strong> лучших из лучших смогут посоревноваться между собой за звание сильнейшего.
+            </li>
+        </ul>
+
+        <p class="mdl-typography--subhead guuc-section__common-text">
+            Условия отборочного тура - (<a href="data/Task.zip" >ссылка на файл с заданием</a>)
+            <br><br>
+            Задание необходимо упаковать в архив <strong>ZIP</strong> и выслать на электронную почту
+            <a href="mailto:guuc2016@gmail.com">guuc2016@gmail.com</a> до
+            <strong class="guuc-color-text--blue">11 апреля 2016 года</strong>. В письме также необходимо указать Ваше имя и телефон для связи.
+            <br><br>
+            Полуфинал пройдет в Гомельском офисе EPAM. Участникам предстоит посоревноваться в умении находить и исправлять ошибки в разметке страниц и каскадных таблицах стилей.
+            <br><br>
+            Финал будет представлять собой CSS Quiz. Участникам нужно с помощью CSS селекторов находить заданные элементы в тексте. При этом важны будут не только правильность, оптимальность, но и время выполнения запросов.
+            <br><br>
+            Все участники, попавшие в полуфинал, получат приятные сувениры, а также смогут посетить мастер-классы от ведущих UX-разработчиков EPAM.
+        </p>
+
+    </div>
+</div> -->
+
+<div class="guuc-section mdl-color--grey-100" data-scroll-target="sponsors">
+    <div class="guuc-section__inner">
+        <h2 class="mdl-typography--text-uppercase guuc-section__heading guuc-color-text--red">Организаторы</h2>
+
+        {% include "./templates/organizers.tmpl.html" with organizersData %}
+
+    </div>
+</div>
+
+<!--
+<div class="guuc-section guuc-section--winners" data-scroll-target="winners">
+    <div class="guuc-section__inner">
+        <h2 class="mdl-typography--text-uppercase guuc-section__heading mdl-color-text--white">Победители</h2>
+
+        {% include "./templates/winners.tmpl.html" with eventsData %}
+
+    </div>
+</div>
+-->
+
+{% endblock %}

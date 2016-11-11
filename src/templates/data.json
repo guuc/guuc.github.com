@@ -52,14 +52,6 @@
                 "photo": "images/persons/Eugene_Kotovich.jpg"
             },
             {
-                "firstName": "Иван",
-                "secondName": "Селицкий",
-                "position": "Software Engineering Team Leader",
-                "email": "Ivan_Sialitski@epam.com",
-                "role": "Эксперт в области фронтенд разработки",
-                "photo": "images/persons/Ivan_Sialitski.gif"
-            },
-            {
                 "firstName": "Ирина",
                 "secondName": "Эмори",
                 "position": "HR Specialist",
@@ -70,7 +62,7 @@
             {
                 "firstName": "Ирина",
                 "secondName": "Тищенко",
-                "position": "Senior HR Specialist",
+                "position": "Senior Recruiter",
                 "email": "Iryna_Tsishchanka@epam.com",
                 "role": "Координатор проекта",
                 "photo": "images/persons/Iryna_Tsishchanka.jpg"
@@ -78,18 +70,10 @@
             {
                 "firstName": "Михаил",
                 "secondName": "Гатилов",
-                "position": "Junior Software Engineer",
+                "position": "Software Engineer",
                 "email": "Mikhail_Hatsilau@epam.com",
                 "role": "Ответственный за техническую поддержку проекта",
                 "photo": "images/persons/Mikhail_Hatsilau.jpg"
-            },
-            {
-                "firstName": "Руслан",
-                "secondName": "Панасюк",
-                "position": "Senior Software Engineer",
-                "email": "Ruslan_Panasiuk@epam.com",
-                "role": "Координатор проекта, технический консультант проекта",
-                "photo": "images/persons/Ruslan_Panasiuk.gif"
             },
             {
                 "firstName": "Сергей",

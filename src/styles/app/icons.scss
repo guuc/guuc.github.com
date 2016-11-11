@@ -1,0 +1,23 @@
+.mdi {
+    vertical-align: middle
+}
+
+a .mdi,
+.mdl-button .mdi,
+.mdl-navigation__link .mdi {
+    margin-right: 12px;
+}
+
+.mdl-layout__drawer-button .mdi {
+    vertical-align: baseline;
+}
+
+.mdl-button--fab .mdi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-12px,-12px);
+    transform: translate(-12px,-12px);
+    line-height: 24px;
+    width: 24px;
+}

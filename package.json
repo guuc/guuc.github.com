@@ -12,6 +12,7 @@
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.3.2",
     "gulp-sequence": "^0.4.5",
     "gulp-strip-comments": "^2.4.3",
     "gulp-swig": "^0.8.0",

@@ -11,6 +11,7 @@ var path = require('path'),
     gulpCleanCss = require('gulp-clean-css'),
     gulpHtmlMin = require('gulp-htmlmin'),
     lazypipe = require('lazypipe'),
+    sass = require('gulp-sass'),
     _ = require('lodash'),
     fs = require('fs'),
     config = {
@@ -111,6 +112,11 @@ gulp.task('html', function() {
                 lazypipe().pipe(
                     function() {
                         return gulpIf(minCondition('js'), gulpUglify());
+                    }
+                ),
+                lazypipe().pipe(
+                    function() {
+                        return gulpIf('*.scss', sass());
                     }
                 ),
                 lazypipe().pipe(

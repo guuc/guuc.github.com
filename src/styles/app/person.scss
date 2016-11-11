@@ -1,0 +1,67 @@
+.guuc-person {
+  position: relative;
+
+  &__photo-wrapper {
+    float: left;
+  }
+
+  &__photo {
+    border: 6px solid #E7E7E7;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__info-wrapper {
+    padding-left: 130px;
+  }
+
+  &__info {}
+
+  &__name,
+  &__title,
+  &__email,
+  &__role {
+    margin: 0;
+  }
+
+  @media (max-width: 839px) {
+
+    &__photo-wrapper {
+      float: none;
+    }
+
+    &__photo {
+      margin: 0 auto;
+    }
+
+    &__info-wrapper {
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    &__name,
+    &__title,
+    &__email,
+    &__role {
+      text-align: center;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__title,
+    &__email,
+    &__role {
+      font-size: 12px;
+    }
+    
+  }
+}

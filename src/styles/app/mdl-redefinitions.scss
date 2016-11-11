@@ -1,0 +1,12 @@
+.mdl-guuc {
+
+  .mdl-layout__drawer-button {
+    margin: 0;
+    padding: 4px;
+  }
+
+  .mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
+    overflow-y: auto;
+  }
+
+}

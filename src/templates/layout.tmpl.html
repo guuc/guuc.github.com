@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@guuc2016">
+    <!-- Open Graph -->
+    <meta property="og:url" content="http://guuc.by/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="GUUC - Gomel UI/UXD Competition">
+    <meta property="og:image" content="http://guuc.by/images/splash-image.jpg">
+    <meta property="og:description" content="GUUC — это первые в Гомеле открытые соревнования по UI/UXD разработке.">
+    <!-- Chrome, Firefox OS and Opera theme color -->
+    <meta name="theme-color" content="#1a9cb0">
+    <!-- Windows Phone theme color-->
+    <meta name="msapplication-navbutton-color" content="#1a9cb0">
+    <meta name="msapplication-TileColor" content="#1a9cb0">
+    <link rel="icon" type="image/x-icon" href="images/logo-icons/favicon.ico">
+    <link rel="icon" type="image/png" href="images/logo-icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/logo-icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/logo-icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/logo-icons/favicon-192x192.png" sizes="192x192">
+    <!-- iOS Safari theme color -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/logo-icons/apple-touch-icon-180x180.png">
+    <!-- App styles -->
+    <!-- build:css styles/vendor/vendor.css -->
+    <link rel="stylesheet" href="styles/vendor/material.min.css">
+    <link rel="stylesheet" href="styles/vendor/materialdesignicons.min.css">
+    <link rel="stylesheet" href="styles/vendor/owl.carousel.css">
+    <!-- endbuild -->
+    <!-- build:css styles/app/app.css -->
+    <link rel="stylesheet" href="styles/app/app.scss">
+    <!-- endbuild -->
+    <!-- Yandex.Metrika counter -->
+    <script async type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter36000145 = new Ya.Metrika({id:36000145,
+                        webvisor:true,
+                        clickmap:true});
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/36000145" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google.Analytics counter -->
+    <script async type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-74998771-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- /Google.Analytics counter -->
+</head>
+<body class="mdl-guuc">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    {% macro navLink(icon, href, text) %}
+        <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-js-button mdl-js-ripple-effect"
+           href="#" data-href="{{ dataHref }}"
+           data-scroll><i class="mdi {{ icon }}"></i>{{ text }}</a>
+    {% endmacro %}
+
+    {% block nav %}{% endblock %}
+
+    {% include "navigation.tmpl.html" %}
+
+    <div class="mdl-layout__content">
+        {% block content %}{% endblock %}
+
+        {% include "contacts.tmpl.html" %}
+
+        {% include "footer.tmpl.html" %}
+    </div>
+
+</div>
+<!-- build:js js/vendor.js -->
+<script src="js/vendor/jquery-2.2.1.min.js"></script>
+<script src="js/vendor/material.min.js"></script>
+<script src="js/vendor/SmoothScroll.js"></script>
+<script src="js/vendor/jquery.touchSwipe.min.js"></script>
+<script src="js/vendor/jquery.smooth-scroll.js"></script>
+<script src="js/vendor/owl.carousel.min.js"></script>
+<!-- endbuild -->
+<!-- build:js js/app.js -->
+<script src="js/app/main.js"></script>
+<!-- endbuild -->
+</body>
+</html>
