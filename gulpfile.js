@@ -44,9 +44,32 @@ var path = require('path'),
         }
     },
     data = {
-        organizersData: require('./src/templates/data.json'),
+        organizersData: organizersWithGroup(),
         eventsData: getEventsData()
     };
+
+function organizersWithGroup() {
+    var data = require('./src/templates/data.json');
+    var groupTypes = data.groups;
+
+    return data.organizers.map(function (organizer) {
+        var personsByGroups = _.groupBy(data.persons[organizer.id], "groupId");
+        var formattedGroups = _.toPairs(personsByGroups).map(function (group) {
+            var zipGroup = _.zipObject(["groupId", "persons"], group);
+            var groupData = _.find(groupTypes, {id: parseInt(zipGroup.groupId)});
+
+            return {
+                groupData: groupData,
+                persons: zipGroup.persons
+            };
+        });
+
+        return {
+            orgData: organizer,
+            groups: formattedGroups
+        }
+    });
+}
 
 function getEventsData() {
     var events = require('./src/templates/winners.json'),

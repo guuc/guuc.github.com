@@ -25,6 +25,20 @@
             "email": "ttihonenko@gstu.by"
         }
     ],
+    "groups": [
+        {
+            "id": 1,
+            "name": "general"
+        },
+        {
+            "id": 2,
+            "name": "css"
+        },
+        {
+            "id": 3,
+            "name": "js"
+        }
+    ],
     "persons": {
         "epam": [
             {
@@ -33,7 +47,8 @@
                 "position": "Senior Software Engineer",
                 "email": "Aliaksei_Rabchanka@epam.com",
                 "role": "Автор идеи, координатор проекта",
-                "photo": "images/persons/Aliaksei_Rabchanka.jpg"
+                "photo": "images/persons/Aliaksei_Rabchanka.jpg",
+                "groupId": 1
             },
             {
                 "firstName": "Вадим",
@@ -41,7 +56,8 @@
                 "position": "Software Engineering Team Leader",
                 "email": "Vadim_Kulaga@epam.com",
                 "role": "Координатор проекта",
-                "photo": "images/persons/Vadim_Kulaga.gif"
+                "photo": "images/persons/Vadim_Kulaga.gif",
+                "groupId": 1
             },
             {
                 "firstName": "Евгений",
@@ -49,7 +65,8 @@
                 "position": "Software Engineer",
                 "email": "Eugene_Kotovich@epam.com",
                 "role": "Ответственный за техническую поддержку проекта",
-                "photo": "images/persons/Eugene_Kotovich.jpg"
+                "photo": "images/persons/Eugene_Kotovich.jpg",
+                "groupId": 1
             },
             {
                 "firstName": "Ирина",
@@ -57,7 +74,8 @@
                 "position": "HR Specialist",
                 "email": "Irene_Emory@epam.com",
                 "role": "Координатор проекта",
-                "photo": "images/persons/Irene_Emory.jpg"
+                "photo": "images/persons/Irene_Emory.jpg",
+                "groupId": 1
             },
             {
                 "firstName": "Ирина",
@@ -65,7 +83,17 @@
                 "position": "Senior Recruiter",
                 "email": "Iryna_Tsishchanka@epam.com",
                 "role": "Координатор проекта",
-                "photo": "images/persons/Iryna_Tsishchanka.jpg"
+                "photo": "images/persons/Iryna_Tsishchanka.jpg",
+                "groupId": 1
+            },
+            {
+                "firstName": "Юрий",
+                "secondName": "Алилуев",
+                "position": "Senior Software Engineer",
+                "email": "Yury_Aliluyeu@epam.com",
+                "role": "Координатор CSS направления",
+                "photo": "images/persons/Yury_Aliluyeu.jpg",
+                "groupId": 2
             },
             {
                 "firstName": "Михаил",
@@ -73,7 +101,8 @@
                 "position": "Software Engineer",
                 "email": "Mikhail_Hatsilau@epam.com",
                 "role": "Ответственный за техническую поддержку проекта",
-                "photo": "images/persons/Mikhail_Hatsilau.jpg"
+                "photo": "images/persons/Mikhail_Hatsilau.jpg",
+                "groupId": 2
             },
             {
                 "firstName": "Сергей",
@@ -81,7 +110,71 @@
                 "position": "Resource Development Lab Team Leader",
                 "email": "Siarhei_Hud@epam.com",
                 "role": "Координатор проекта",
-                "photo": "images/persons/Siarhei_Hud.jpg"
+                "photo": "images/persons/Siarhei_Hud.jpg",
+                "groupId": 1
+            },
+            {
+                "firstName": "Руслан",
+                "secondName": "Панасюк",
+                "position": "Senior Software Engineer",
+                "email": "Ruslan_Panasiuk@epam.com",
+                "role": "Ответственный за техническую поддержку проекта",
+                "photo": "images/persons/Ruslan_Panasiuk.gif",
+                "groupId": 2
+            },
+            {
+                "firstName": "Харчиков",
+                "secondName": "Алексей",
+                "position": "Senior Software Engineer",
+                "email": "Aliaksei_Kharchykau@epam.com",
+                "role": "Координатор JS направления",
+                "photo": "images/persons/Aliaksei_Kharchykau.jpg",
+                "groupId": 3
+            },
+            {
+                "firstName": "Елена",
+                "secondName": "Гребенчук",
+                "position": "Junior Software Engineer",
+                "email": "Elena_Grebenchuk@epam.com",
+                "role": "Ответственная за техническую поддержку проекта",
+                "photo": "images/persons/Elena_Grebenchuk.jpg",
+                "groupId": 3
+            },
+            {
+                "firstName": "Никита",
+                "secondName": "Захаренко",
+                "position": "Student",
+                "email": "Mikita_Zakharanka@epam.com",
+                "role": "Ответственный за техническую поддержку проекта",
+                "photo": "images/persons/Mikita_Zakharanka.jpg",
+                "groupId": 3
+            },
+            {
+                "firstName": "Виктория",
+                "secondName": "Макаренко",
+                "position": "Student",
+                "email": "Viktoryia_Makaranka@epam.com",
+                "role": "Ответственная за техническую поддержку проекта",
+                "photo": "images/persons/Viktoryia_Makaranka.jpg",
+                "groupId": 3
+            },
+            {
+                "firstName": "Ольга",
+                "secondName": "Быстрова",
+                "position": "Student",
+                "email": "Volha_Bystrova@epam.com",
+                "role": "Ответственная за техническую поддержку проекта",
+                "photo": "images/persons/Volha_Bystrova.jpg",
+                "groupId": 3
+            },
+            {
+                "firstName": "Евгений",
+                "secondName": "Шолохов",
+                "position": "Student",
+                "email": "Yauheni_Sholakhau@epam.com",
+                "role": "Ответственный за техническую поддержку проекта",
+                "photo": "images/persons/Yauheni_Sholakhau.jpg",
+                "groupId": 3
             }
         ],
         "gsu": [
@@ -91,7 +184,8 @@
                 "position": "Заведующий кафедрой, кандидат физико-математических наук, доцент",
                 "email": "kuzmenkov@gsu.by",
                 "role": "Координатор проекта",
-                "photo": "images/persons/Dmitry_Kuzmenkov.gif"
+                "photo": "images/persons/Dmitry_Kuzmenkov.gif",
+                "groupId": 1
             }
         ],
         "gstu": [
@@ -101,7 +195,8 @@
                 "position": "Заведующий кафедрой, кандидат физико-математических наук, доцент",
                 "email": "ttihonenko@gstu.by",
                 "role": "Координатор проекта",
-                "photo": "images/persons/Tatiana_Tihonenko.jpg"
+                "photo": "images/persons/Tatiana_Tihonenko.jpg",
+                "groupId": 1
             }
         ]
     }

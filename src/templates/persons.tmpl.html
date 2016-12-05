@@ -1,8 +1,19 @@
-<div class="mdl-grid">
+{% for group in groups %}
 
-    {% for person in personsData %}
+    {% if group.groupData.id !== 1 %}
 
-    <div class="guuc-person {% if personsData.length > 1 %}mdl-cell mdl-cell--6-col-desktop{% else %}mdl-cell mdl-cell--12-col-desktop{% endif  %}">
+    <h3 class="mdl-typography--text-uppercase guuc-section__heading
+              {% if group.groupData.name === 'css' %} guuc-color-text--blue{% endif %}
+              {% if group.groupData.name === 'js' %} guuc-color-text--green{% endif %}
+              ">{{group.groupData.name}}</h3>
+
+    {% endif %}
+
+    <div class="mdl-grid">
+
+    {% for person in group.persons %}
+
+    <div class="guuc-person {% if group.persons.length > 1 %}mdl-cell mdl-cell--6-col-desktop{% else %}mdl-cell mdl-cell--12-col-desktop{% endif  %}">
         <div class="guuc-person__photo-wrapper">
             <div class="guuc-person__photo" style="background-image: url({{person.photo}})"></div>
         </div>
@@ -28,4 +39,6 @@
 
     {% endfor %}
 
-</div>
+    </div>
+
+{% endfor %}
