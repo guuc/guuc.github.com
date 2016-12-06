@@ -2,7 +2,10 @@
 .idea
 
 # NPM
-node_modules
+node_modules/
 
-# Dist
-dist
+dist/
+guuc-dist.tgz
+npm-debug.log
+
+*.swp
