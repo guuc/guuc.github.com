@@ -41,6 +41,10 @@ var path = require('path'),
             src: './data/**/',
             files: '*.*',
             dist: './data'
+        },
+
+        copyMisc: {
+          files: 'CNAME'
         }
     },
     data = {
@@ -119,10 +123,6 @@ function minCondition(type) {
     };
 }
 
-gulp.task('default', function (cb) {
-    gulpSequence('clean', ['html', 'img', 'fonts', 'data'], cb);
-});
-
 gulp.task('clean', function() {
     return gulp.src(path.join(config.root.dist, "**", "*.*"))
         .pipe(gulpRimraf());
@@ -172,4 +172,13 @@ gulp.task('fonts', function() {
 gulp.task('data', function() {
     return gulp.src(path.join(config.root.src, config.data.src, config.data.files))
         .pipe(gulp.dest(path.join(config.root.dist, config.data.dist)))
+});
+
+gulp.task('copy-misc', function() {
+    return gulp.src(path.join(config.root.src, config.copyMisc.files))
+        .pipe(gulp.dest(config.root.dist))
+});
+
+gulp.task('default', function (cb) {
+    gulpSequence('clean', ['html', 'img', 'fonts', 'data', 'copy-misc'], cb);
 });
