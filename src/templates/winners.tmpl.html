@@ -2,7 +2,7 @@
 
 <div class="mdl-grid mdl-grid--no-spacing mdl-card mdl-shadow--2dp guuc-winners">
     <div class="mdl-cell--12-col mdl-card__title mdl-card--border">
-        <h4 class="mdl-card__title-text"><span>GUUC #{{loop.index}}</span> - {{event.date}}</h4>
+        <h4 class="mdl-card__title-text"><span>GUUC #{{eventsData.length - (loop.index - 1)}}</span> - {{event.date}}</h4>
     </div>
 
     {% if event.photos.length > 0 %}
@@ -22,34 +22,89 @@
     {% endif %}
 
     <div class="mdl-cell--12-col mdl-card__supporting-text guuc-color-text--graphite">
-        <p>{{event.text}}</p>
-        <div class="mdl-grid guuc-winners__winners-list">
 
-            {% for participant in event.participants %}
+        <div class="mdl-typography--subhead guuc-color-text--graphite">
 
-                <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet {% if loop.first %}mdl-cell--2-offset-tablet {% endif %}mdl-cell--4-col-desktop mdl-card mdl-shadow--2dp guuc-winner">
-                    <div class="guuc-winner__inner-wrapper">
-                        <div class="guuc-winner__photo-wrapper">
-                            <div class="guuc-winner__rank mdl-color--orange">{{loop.index}}</div>
+            {% if event.participants.length > 0 %}
 
-                            {% if loop.first %}
+            <div class="mdl-grid guuc-winners__winners-list">
 
-                            <div class="guuc-winner__extra-rank mdl-color--orange mdi mdi-trophy-award"></div>
+                {% for participant in event.participants %}
 
-                            {% endif %}
+                    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet {% if loop.first %}mdl-cell--2-offset-tablet {% endif %}mdl-cell--4-col-desktop mdl-card mdl-shadow--2dp guuc-winner">
+                        <div class="guuc-winner__inner-wrapper">
+                            <div class="guuc-winner__photo-wrapper">
+                                <div class="guuc-winner__rank mdl-color--orange">{{loop.index}}</div>
 
-                            <div class="guuc-winner__photo" style="background-image: url({{participant.photo}})"></div>
-                        </div>
-                        <div class="guuc-winner__info">
-                            <h5 class="guuc-winner__name guuc-color-text--blue">{{participant.name}}</h5>
+                                {% if loop.first %}
+
+                                <div class="guuc-winner__extra-rank mdl-color--orange mdi mdi-trophy-award"></div>
+
+                                {% endif %}
+
+                                <div class="guuc-winner__photo" style="background-image: url({{participant.photo}})"></div>
+                            </div>
+                            <div class="guuc-winner__info">
+                                <h5 class="guuc-winner__name guuc-color-text--blue">{{participant.name}}</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            {% endfor %}
+                {% endfor %}
+
+            </div>
+
+            {% endif %}
+
+            {% if event.participantsTable.length > 0 %}
+
+            <table class="mdl-data-table mdl-data-table--selectable guuc-winners-table" width="100%">
+                <thead class="mdl-color--grey-200">
+                    <tr>
+                        <th>№</th>
+                        <th>Имя</th>
+                        <th>JS (score)</th>
+                        <th>CSS (time)</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for participant in event.participantsTable %}
+
+                    <tr {% if participant.js.place && participant.css.place %}
+                            {% if participant.js.place === 1 && participant.css.place === 1 %}
+                                class="mdl-color-text--orange"
+                            {% else %}
+                                class="guuc-color-text--red"
+                            {% endif %}
+                        {% else %}
+                            {% if participant.js.place %}
+                                class="guuc-color-text--green"
+                            {% endif %}
+                            {% if participant.css.place %}
+                                class="guuc-color-text--blue"
+                            {% endif %}
+                        {% endif %}
+                    >
+                        <td></td>
+                        <td {% if participant.js.place %} data-js-place="{{participant.js.place}}" {% endif %}
+                            {% if participant.css.place %} data-css-place="{{participant.css.place}}" {% endif %}>
+                            {{participant.data.name}}
+                        </td>
+                        <td>{{participant.js.value}}</td>
+                        <td>{{participant.css.value}}</td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+            </table>
+
+            {% endif %}
 
         </div>
     </div>
+
 </div>
 
 {% endfor %}

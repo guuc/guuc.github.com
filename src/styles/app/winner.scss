@@ -1,12 +1,118 @@
 .guuc-winners {
   width: 100%;
 
+  & + & {
+    margin-top: 40px;
+  }
+
   &__media {
     position: relative;
   }
 
   &__winners-list {
     padding: 0;
+  }
+
+  &-table {
+    font-size: 16px;
+    width: 100%;
+
+    thead {
+      padding-bottom: 0;
+    }
+
+    th {
+      font-weight: 500;
+      font-size: 16px;
+      color: rgba(#000, .8);
+    }
+
+    th,
+    td {
+      padding: 8px;
+    }
+
+    td[data-js-place],
+    td[data-css-place] {
+      padding-left: 36px;
+    }
+
+    td[data-js-place]:after,
+    td[data-css-place]:before {
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      font-size: 12px;
+      color: #fff;
+      position: absolute;
+      border-radius: 50%;
+      left: 8px;
+      text-align: center;
+      top: 50%;
+      margin-top: -10px;
+    }
+
+    td[data-js-place][data-css-place] {
+      &:after {
+        margin-top: -2px;
+      }
+
+      &::before {
+        margin-top: -18px;
+      }
+    }
+
+    td[data-js-place]:after {
+      content: attr(data-js-place);
+      background-color: #a3c644;
+    }
+
+    td[data-css-place]:before {
+      content: attr(data-css-place);
+      background-color: #39c2d7;
+    }
+
+    th:first-of-type,
+    td:first-of-type {
+      padding-left: 8px;
+    }
+
+  }
+
+  &__control-wrapper {
+    div {
+      flex-grow: 1;
+
+      label {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    @media (min-width: 840px) {
+      padding-right: 20px;
+
+      & + & {
+        padding-left: 20px;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__control {
+    background-color: rgba(#fff, 0.9);
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid rgba(#000, .12);
+    border-radius: 2px;
+    height: 2.5rem;
+
+    &--length {
+      margin: 0 10px;
+    }
   }
 }
 

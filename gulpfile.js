@@ -85,17 +85,26 @@ function getEventsData() {
             return _.includes(event.winnersIds, participant.id);
         });
 
-        return new EventData(people, event);
+        var participantsTable = event.participantsTable ? event.participantsTable.map(function(item) {
+            return {
+                data: _.find(participants, { id: item[0] }),
+                js: item[1],
+                css: item[2]
+            }
+        }) : [];
+
+        return new EventData(people, event, participantsTable);
 
     });
 }
 
-function EventData(participants, event) {
+function EventData(participants, event, participantsTable) {
     var that = {};
 
     that.participants = participants;
     that.date = event.date;
     that.text = event.text;
+    that.participantsTable = participantsTable;
     that.photos = getEventPhotos(event.photos);
 
     return that;

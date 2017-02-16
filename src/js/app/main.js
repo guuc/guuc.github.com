@@ -36,15 +36,63 @@
 
         });
 
-        $(".owl-carousel").owlCarousel({
+        var owl = $(".owl-carousel");
+
+        owl.on('initialized.owl.carousel changed.owl.carousel resized.owl.carousel', owl_carousel_page_numbers);
+
+        owl.owlCarousel({
             items: 1,
             lazyLoad: true,
             loop: true,
             nav: true,
-            dots: false,
+            dots: true,
             navText: [ '<button class="' + owlNexPrevBtnClass + '"><i class="mdi mdi-chevron-left no-margin"></i></button>',
                 '<button class="' + owlNexPrevBtnClass + '"><i class="mdi mdi-chevron-right no-margin"></i></button>' ],
             navClass: [ 'owl-prev', 'owl-next']
+        });
+
+        $.extend(jQuery.fn.dataTableExt.oSort, {
+            "css-time-pre": function (a) {
+                var cssTime = a.split(":");
+
+                return new Date(2000, 0, 1, 0, cssTime[0], cssTime[1])
+            },
+        
+            "css-time-asc": function (a, b) {
+                return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+            },
+        
+            "css-time-desc": function (a, b) {
+                return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+            }
+        });
+
+        $('.guuc-winners-table').DataTable({
+            bAutoWidth: true,
+            order: [[1, 'desc']],
+            columnDefs: [{
+                searchable: false,
+                orderable: false,
+                targets: [0]
+            }, {
+                type: 'css-time',
+                targets: [3]
+            }],
+            rowCallback: function(row, data, index) {
+                var info = this.api().page.info();
+                var page = info.page;
+                var length = info.length;
+                var rowIndex = (page * length + (index +1));
+                $('td:eq(0)', row).html(rowIndex);
+            },
+            lengthMenu: [[5, 10, 25, 50, 100, -1], [5, 10, 25, 50, 100, 'All']],
+            oLanguage: {
+                oPaginate: {
+                    sNext: '<i class="mdi mdi-chevron-right no-margin" ></i>',
+                    sPrevious: '<i class="mdi mdi-chevron-left no-margin" ></i>'
+                },
+                oInfoFiltered: ''
+            }
         });
 
         // Do when MDL is ready
@@ -64,6 +112,23 @@
         });
 
     });
+
+    function owl_carousel_page_numbers(e) {
+        var items_per_page = e.page.size;
+        var display_text;
+        var min_item_index;
+        var max_item_index;
+
+        if (items_per_page > 1) {
+            min_item_index = e.item.index,
+            max_item_index = min_item_index + items_per_page,
+            display_text = (min_item_index+1) + '-' + max_item_index;
+        } else {
+            display_text = (e.item.index+1);
+        }
+
+        e.currentTarget.setAttribute('data-slides-count', e.page.index + 1 + ' из ' + e.item.count)
+    }
 
     function scrollIndicator() {
 

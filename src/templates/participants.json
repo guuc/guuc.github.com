@@ -1,17 +1,117 @@
-[
-    {
+[{
         "id": 1,
-        "name": "Александр Симонок",
+        "name": "ALIAKSANDR SIMANOK",
         "photo": "images/participants/Aleksandr_Simonok.jpg"
     },
     {
         "id": 2,
-        "name": "Ян Юнитский",
+        "name": "YAN YUNITSKI",
         "photo": "images/participants/Yan_Yunitskiy.jpg"
     },
     {
         "id": 3,
-        "name": "Александр Колымаго",
+        "name": "ALIAKSANDR KALYMAHA",
         "photo": "images/participants/Aleksandr_Kolymago.jpg"
+    }, {
+        "id": 4,
+        "name": "EVGENIY BLAGODAROV",
+        "photo": ""
+    }, {
+        "id": 5,
+        "name": "MIKALAI SUHLOB",
+        "photo": ""
+    }, {
+        "id": 6,
+        "name": "PAVEL ANANCHENKO",
+        "photo": ""
+    }, {
+        "id": 7,
+        "name": "ARTSIOM SAMUSEU",
+        "photo": ""
+    }, {
+        "id": 8,
+        "name": "ARTSIOM HAYRULIN",
+        "photo": ""
+    }, {
+        "id": 9,
+        "name": "ANDREI STARAVOITAU",
+        "photo": ""
+    }, {
+        "id": 10,
+        "name": "SIARHEI PRYSTAUKA",
+        "photo": ""
+    }, {
+        "id": 11,
+        "name": "PAVEL DROZDOV",
+        "photo": ""
+    }, {
+        "id": 12,
+        "name": "ALEKSEY LYZO",
+        "photo": ""
+    }, {
+        "id": 13,
+        "name": "ALIAKSANDR SEMCHANKA",
+        "photo": ""
+    }, {
+        "id": 14,
+        "name": "DZMITRY SUDALENKA",
+        "photo": ""
+    }, {
+        "id": 15,
+        "name": "ALIAKSANDR RABCHANKA",
+        "photo": ""
+    }, {
+        "id": 16,
+        "name": "NIKOLAI SHKRABKOV",
+        "photo": ""
+    }, {
+        "id": 17,
+        "name": "YANA SHCHERBO",
+        "photo": ""
+    }, {
+        "id": 18,
+        "name": "PAVEL STELMAKH",
+        "photo": ""
+    }, {
+        "id": 19,
+        "name": "VLAD PINCHUK",
+        "photo": ""
+    }, {
+        "id": 20,
+        "name": "YAUHENI KABZAR",
+        "photo": ""
+    }, {
+        "id": 21,
+        "name": "ANDREY TITOV",
+        "photo": ""
+    }, {
+        "id": 22,
+        "name": "VITALI DEMENKOV",
+        "photo": ""
+    }, {
+        "id": 23,
+        "name": "VLAD KURBATSKY",
+        "photo": ""
+    }, {
+        "id": 24,
+        "name": "NATALIA BRICHICKOVA",
+        "photo": ""
+    }, {
+        "id": 25,
+        "name": "VICTOR TIHMANOVICH",
+        "photo": ""
+    }, {
+        "id": 26,
+        "name": "IVAN SOMOV",
+        "photo": ""
+    }, {
+        "id": 27,
+        "name": "ALIAKSANDR VIARHEICHYK",
+        "photo": ""
+    }, {
+        "id": 28,
+        "name": "VALERY KARNILAYEV",
+        "photo": ""
     }
+
 ]
