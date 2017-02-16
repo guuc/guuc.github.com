@@ -6,7 +6,6 @@ HOST=freebsd@guuc.by
 
 scp $TARGET $HOST:~
 
-## FIXME this does not work
 ssh $HOST <<-'ENDSSH'
   bash
   set -ex
@@ -16,5 +15,5 @@ ssh $HOST <<-'ENDSSH'
   tar czf ~guuc-dist.tgz WEB_ROOT
   # Deploy
   rm -rf $WEB_ROOT/**
-  cp -r guuc-dist/ $WEB_ROOT
+  cp -r dist/* $WEB_ROOT
 ENDSSH
